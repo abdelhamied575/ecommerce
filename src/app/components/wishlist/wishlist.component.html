@@ -1,0 +1,27 @@
+
+
+
+
+<!-- products -->
+<section class="my-4">
+    <div class="row g-4">
+        <div class="col-md-2" *ngFor="let product of wishData">
+            <div class="product">
+                <div class="p-2 cursor-pointer" [routerLink]="['/details',product._id]">
+                    <img [src]="product.imageCover" class="w-100" [alt]="product.title">
+                    <h3 class="h6">{{product.category.name | termText:3}}</h3>
+                    <h4 class="h6">{{product.title | termText:2}}</h4>
+                    <div class="d-flex align-items-center justify-content-between">
+                        <span>{{product.price | currency:'EUR'}} </span>
+                        <div>
+                            <i class="fas fa-star rating-color"></i>
+                            <span class="text-muted">{{product.ratingsAverage}}</span>
+                        </div>
+                    </div>
+                </div>
+                <button (click)="removeWish(product._id)" class="btn-main mb-2 w-75 d-block mx-auto">remove from wishlist</button>
+                <button (click)="addCart(product._id)" class="btn-main mb-2 w-75 d-block mx-auto">Add Products</button>
+            </div>
+        </div>
+    </div>
+</section>

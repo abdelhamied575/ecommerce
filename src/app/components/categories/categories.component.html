@@ -1,0 +1,12 @@
+
+
+<section>
+    <div class="row g-3">
+        <div class="col-md-4" *ngFor="let item of categories">
+            <div class="categories cursor-pointer">
+                <img [src]="item.image" height="270px" class="w-100" [alt]="item.name">
+                <h1 class="h3 text-center">{{item.name}}</h1>
+            </div>
+        </div>
+    </div>
+</section>

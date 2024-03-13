@@ -1,0 +1,10 @@
+
+:host{
+    display: flex;
+    flex-direction: column;
+    // background-color: #09c;
+    min-height: 100vh;
+
+    // justify---> y axies      aligin---->x axies
+    justify-content: space-between;
+}
